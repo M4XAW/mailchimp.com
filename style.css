@@ -1,0 +1,188 @@
+@import url("https://fonts.cdnfonts.com/css/graphik");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #f9ffd6;
+  /* color: #ffffff; */
+}
+
+body {
+  font-family: "Graphik", sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  background-color: #d8eacc;
+  transition: all 0.5s ease;
+}
+
+header:hover {
+  background-color: #fff;
+}
+
+.menu,
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+
+.menu a {
+  color: #202020;
+  padding: 1.2rem;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #202020;
+    background-color: #d8eacc;
+    /* text-decoration: underline; */
+}
+
+.image {
+  height: 60%;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  color: #202020;
+  font-size: 0.9rem;
+  padding: 1rem 1.8rem;
+  border: 2px solid #202020;
+  border-radius: 30px;
+  margin: 0 15px;
+}
+
+.buttons a:last-of-type {
+  color: white;
+  background-color: #202020;
+  /* color: #202020; */
+  /* background-color: #ffe01b; */
+}
+
+main {
+  height: 88vh;
+  background-color: #d8eacc;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+  height: 100%;
+}
+
+.text {
+  height: 80%;
+  width: 55%;
+  padding: 0 40px;
+}
+
+#model {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-family: "Abril Fatface";
+  margin-bottom: 20px;
+}
+
+#text-description,
+button {
+  margin-bottom: 50px;
+}
+
+#text-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+button {
+  font-size: 1rem;
+  color: white;
+  background-color: #202020;
+  padding: 1rem 1.8rem;
+  border-radius: 30px;
+  border: none;
+}
+
+.text-button {
+  color: #fff;
+  background-color: #202020;
+  padding: 1rem 2.2rem;
+  border-radius: 30px;
+}
+
+.container-image {
+  width: 45%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container-image img {
+  height: 100%;
+  width: 100%;
+  /* margin: 0 0 0 50px; */
+}
+
+.test {
+  height: 2500px;
+  transform: translate(0, -100px);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  /* border-top: 200px solid #bdd1af; */
+  border-top: 200px solid #d8eacc;
+  border-right: 99vw solid transparent;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  background-color: #d8eacc;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  margin-right: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #b4db9a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #202020;
+  background-clip: content-box;
+}
