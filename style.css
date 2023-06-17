@@ -1,5 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/graphik");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 * {
   margin: 0;
@@ -17,6 +18,7 @@
 body {
   font-family: "Graphik", sans-serif;
   background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 header {
@@ -34,6 +36,22 @@ header:hover {
   background-color: #fff;
 }
 
+#buttonUp {
+  position: fixed;
+  right: 2vw;
+  bottom: 5vh;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 3px solid #202020;
+  background-image: url("https://img.icons8.com/?size=512&id=LZv7h8pFXtHA&format=png");
+  background-size: cover;
+  background-size: 70% 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .menu,
 .buttons {
   display: flex;
@@ -49,9 +67,9 @@ header:hover {
 }
 
 .menu a:hover {
-    color: #202020;
-    background-color: #d8eacc;
-    /* text-decoration: underline; */
+  color: #202020;
+  background-color: #d8eacc;
+  /* text-decoration: underline; */
 }
 
 .image {
@@ -82,17 +100,13 @@ header:hover {
   /* background-color: #ffe01b; */
 }
 
-main {
-  height: 88vh;
-  background-color: #d8eacc;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10vw;
-  height: 100%;
+  height: 88vh;
+  background-color: #d8eacc;
 }
 
 .text {
@@ -108,7 +122,7 @@ main {
 
 h1 {
   font-size: 2.7rem;
-  font-family: "Abril Fatface";
+  font-family: "Dela Gothic One";
   margin-bottom: 20px;
 }
 
@@ -130,6 +144,7 @@ button {
   padding: 1rem 1.8rem;
   border-radius: 30px;
   border: none;
+  cursor: pointer;
 }
 
 .text-button {
@@ -149,6 +164,109 @@ button {
   height: 100%;
   width: 100%;
   /* margin: 0 0 0 50px; */
+  animation: slide 1s ease, fade 1s ease;
+  transition: all 0.5s ease;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  /* background-color: #98b485; */
+  padding: 0 20vw;
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  font-family: "Dela Gothic One";
+  margin-bottom: 20px;
+}
+
+#color {
+  color: #5a6453;
+}
+
+.description > p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.container-box {
+  margin-bottom: 50px;
+}
+
+.container-description {
+  text-align: center;
+}
+
+.container-description > p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.container-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.box {
+  height: 400px;
+  width: 19vw;
+  border: 2px solid #202020;
+  padding: 2rem;
+}
+
+.container-stars {
+  height: 5vh;
+}
+
+.container-stars img {
+  height: 60%;
+  width: auto;
+}
+
+.container-box-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container-box-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.container-opinion > a {
+  color: #202020;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.container-opinion {
+  /* margin-bottom: 25px; */
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.company {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .test {
@@ -161,7 +279,7 @@ button {
   height: 0;
   border-left: 0px solid transparent;
   /* border-top: 200px solid #bdd1af; */
-  border-top: 200px solid #d8eacc;
+  border-top: 30vh solid #d8eacc;
   border-right: 99vw solid transparent;
 }
 
@@ -173,13 +291,34 @@ footer {
   background-color: #d8eacc;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(500px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 15px;
   margin-right: 20px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #b4db9a;
+  /* background-color: #b4db9a; */
+  border: 2px solid #000;
 }
 
 ::-webkit-scrollbar-thumb {
