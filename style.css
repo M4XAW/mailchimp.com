@@ -95,7 +95,6 @@ header:hover {
 }
 
 .button:hover {
-  flex-shrink: 0;
   padding: 1rem 4rem;
 }
 
