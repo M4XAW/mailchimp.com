@@ -91,6 +91,12 @@ header:hover {
   border: 2px solid #202020;
   border-radius: 30px;
   margin: 0 15px;
+  transition: padding 0.3s ease;
+}
+
+.button:hover {
+  flex-shrink: 0;
+  padding: 1rem 4rem;
 }
 
 .buttons a:last-of-type {
@@ -145,6 +151,11 @@ button {
   border-radius: 30px;
   border: none;
   cursor: pointer;
+  transition: padding 0.3s ease;
+}
+
+button:hover {
+  padding: 1rem 4rem;
 }
 
 .text-button {
@@ -186,7 +197,8 @@ button {
 }
 
 #color {
-  color: #5a6453;
+  background-color: #d8eacc;
+  padding: 0 15px;
 }
 
 .description > p {
@@ -218,9 +230,14 @@ button {
 
 .box {
   height: 400px;
-  width: 19vw;
+  width: 360px;
   border: 2px solid #202020;
-  padding: 2rem;
+  padding: 30px;
+  transition: border-bottom 0.3s ease;
+}
+
+.box:hover {
+  border-bottom: 20px solid #d8eacc;
 }
 
 .container-stars {
@@ -230,6 +247,12 @@ button {
 .container-stars img {
   height: 60%;
   width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.container-stars img:hover {
+  transform: scale(1.2) rotate(5deg);
 }
 
 .container-box-text {
