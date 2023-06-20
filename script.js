@@ -19,6 +19,15 @@ $("#icon-search").click(function () {
         height: "150px",
       },
       300
-    ); // Augmente la hauteur de 10vh avec une animation de 500 ms
+    );
   }
+});
+
+$("#close").click(function () {
+  $("#container-search").animate(
+    {
+      height: 0,
+    },
+    300
+  );
 });
