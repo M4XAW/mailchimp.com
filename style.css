@@ -137,7 +137,7 @@ button {
 }
 
 #text-description {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 300;
 }
@@ -148,6 +148,7 @@ button {
   background-color: #202020;
   padding: 1rem 1.8rem;
   border-radius: 30px;
+  text-align: none;
   border: none;
   cursor: pointer;
   transition: padding 0.3s ease;
@@ -168,6 +169,10 @@ button:hover {
   width: 45%;
   object-fit: cover;
   object-position: center;
+  /* background-color: #fff;
+  padding: 50px;
+  border-radius: 30px;
+  border: 3px solid #202020; */
 }
 
 .container-image img {
@@ -212,6 +217,7 @@ button:hover {
 
 .container-description {
   text-align: center;
+  padding: 50px 0;
 }
 
 .container-description > p {
@@ -300,8 +306,49 @@ button:hover {
   height: 0;
   border-left: 0px solid transparent;
   /* border-top: 200px solid #bdd1af; */
-  border-top: 30vh solid #d8eacc;
+  border-top: 250px solid #d8eacc;
   border-right: 99vw solid transparent;
+}
+
+.container-marketplace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px;
+  background-color: #d8eacc;
+  padding: 0 10vw;
+  margin-bottom: 500px;
+}
+
+.container-text-marketplace {
+  width: 85%;
+}
+
+.title-marketplace {
+  font-family: "Dela Gothic One";
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.p-marketplace {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.button-marketplace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #202020;
+  background-color: transparent;
+  border: 2px solid #202020;
+  transition: padding 0.3s ease;
+}
+
+.button-marketplace:hover {
+  padding: 1rem 4rem;
 }
 
 footer {
