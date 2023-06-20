@@ -11,7 +11,7 @@
 }
 
 ::selection {
-  background-color: #f9ffd6;
+  background-color: #40723f3a;
   /* color: #ffffff; */
 }
 
@@ -19,6 +19,40 @@ body {
   font-family: "Graphik", sans-serif;
   background-color: #f5f5f5;
   overflow-x: hidden;
+}
+
+svg {
+  transition: transform 0.3s ease;
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  font-size: 13px;
+  background-color: #202020;
+  color: #fff; 
+  padding: 0 2.5rem;
+}
+
+header:hover .image svg {
+  transform: scale(1.1);
+}
+
+#container-search {
+  background-color: #202020;
+  transition: all 0.3s ease;
+}
+
+.banner-link {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.banner-link:hover {
+  color: #d8eacc;
+  text-decoration: underline;
 }
 
 header {
@@ -56,6 +90,9 @@ header:hover {
 .buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.menu {
   padding: 0 2.5rem;
 }
 
@@ -103,6 +140,18 @@ header:hover {
   background-color: #202020;
   /* color: #202020; */
   /* background-color: #ffe01b; */
+}
+
+.buttons:last-child {
+  display: flex;
+  align-items: center;
+}
+
+#icon-search {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .container {
@@ -211,10 +260,6 @@ button:hover {
   font-weight: 300;
 }
 
-.container-box {
-  margin-bottom: 50px;
-}
-
 .container-description {
   text-align: center;
   padding: 50px 0;
@@ -224,9 +269,9 @@ button:hover {
   font-size: 1.3rem;
   line-height: 1.5;
   font-weight: 300;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
-.container-box {
+.slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -376,6 +421,37 @@ footer {
 
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    justify-content: center !important;
+  }
+  .button:last-of-type, #icon-search {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .button, .menu {
+    display: none;
+  }
+
+  .text {
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
