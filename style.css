@@ -1,6 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/graphik");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 
 * {
   margin: 0;
@@ -80,6 +80,7 @@ header {
   height: 12vh;
   background-color: #d8eacc;
   transition: all 0.5s ease;
+  z-index: 100;
 }
 
 header:hover {
@@ -126,14 +127,13 @@ header:hover {
 }
 
 .image {
-  height: 60%;
-  width: auto;
-  object-fit: cover;
-  object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
 }
 
-.image img {
-  height: 100%;
+.image svg {
   width: 100%;
 }
 
@@ -192,7 +192,7 @@ header:hover {
 
 h1 {
   font-size: 2.7rem;
-  font-family: "Dela Gothic One";
+  font-family: "Gloock";
   margin-bottom: 20px;
 }
 
@@ -244,9 +244,24 @@ button:hover {
   height: 100%;
   width: 100%;
   /* margin: 0 0 0 50px; */
-  animation: slide 1s ease, fade 1s ease;
-  transition: all 0.5s ease;
 }
+
+.brandLogo__freddie {
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  transform-origin: 25px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 .description {
   display: flex;
@@ -259,15 +274,41 @@ button:hover {
   padding: 0 20vw;
 }
 
+.animated {
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.animated-right {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
 .description h2 {
   font-size: 2.5rem;
-  font-family: "Dela Gothic One";
+  font-family: "Gloock";
   margin-bottom: 20px;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  height: 4px;
+  background: #819b70;
+  z-index: 10000;
 }
 
 #color {
   background-color: #d8eacc;
-  padding: 0 15px;
+  padding: 5px 15px;
 }
 
 .description > p {
@@ -378,7 +419,6 @@ button:hover {
   height: 600px;
   background-color: #d8eacc;
   padding: 0 10vw;
-  margin-bottom: 500px;
 }
 
 .container-text-marketplace {
@@ -386,7 +426,7 @@ button:hover {
 }
 
 .title-marketplace {
-  font-family: "Dela Gothic One";
+  font-family: "Gloock";
   font-size: 40px;
   margin-bottom: 15px;
 }
@@ -410,6 +450,28 @@ button:hover {
 
 .button-marketplace:hover {
   padding: 1rem 4rem;
+}
+
+.horizontal-grid {
+  display: grid;
+  align-items: start;
+  grid-gap: 20px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 15vw;
+}
+
+
+.item-image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.item-h2 {
+  font-size: 1.5rem;
+  font-family: "Gloock";
+  margin-bottom: 20px;
 }
 
 footer {
@@ -471,16 +533,15 @@ footer {
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: auto;
 }
 
 ::-webkit-scrollbar-track {
-  /* background-color: #b4db9a; */
-  /* border: 2px solid #000; */
+  background-color: #819b70;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #202020;
   background-clip: content-box;
-}
+} */
