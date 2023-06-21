@@ -81,3 +81,15 @@ window.addEventListener("scroll", () => {
     document.body.scrollTop || document.documentElement.scrollTop;
   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
 });
+
+
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);

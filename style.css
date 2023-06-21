@@ -201,6 +201,10 @@ button {
   margin-bottom: 50px;
 }
 
+.container-description button {
+  margin-top: 25px;
+}
+
 #text-description {
   font-size: 1.6rem;
   line-height: 1.5;
@@ -262,7 +266,6 @@ button:hover {
   }
 }
 
-
 .description {
   display: flex;
   justify-content: center;
@@ -276,7 +279,7 @@ button:hover {
 
 .animated {
   opacity: 0;
-  transform: translateY(-200px);
+  transform: translateY(-150px);
   transition: opacity 2s ease, transform 1s ease;
 }
 
@@ -291,10 +294,16 @@ button:hover {
   transform: translateY(0); 
 }
 
-.description h2 {
+.title {
   font-size: 2.5rem;
   font-family: "Gloock";
   margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 #scroll-progress {
@@ -319,20 +328,18 @@ button:hover {
 
 .container-description {
   text-align: center;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
-.container-description > p {
-  font-size: 1.3rem;
-  line-height: 1.5;
-  font-weight: 300;
-  margin-bottom: 50px;
-}
 .slider {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  
 }
 
 .box {
@@ -458,20 +465,48 @@ button:hover {
   grid-gap: 20px;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
-  padding: 0 15vw;
+  padding: 0 15vw 80px;
 }
 
+.item {
+  text-align: center;
+}
+
+.item-image {
+  height: 18vh;
+  max-width: 100%;
+}
 
 .item-image img {
-  height: auto;
+  height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .item-h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-family: "Gloock";
-  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+.item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.item-a {
+  color: #202020;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.item-a:hover {
+  color: #819b70;
+  word-spacing: 5px;
+  text-decoration: underline;
 }
 
 footer {
