@@ -63,7 +63,6 @@ window.addEventListener("scroll", () => {
   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
 });
 
-
 window.addEventListener(
   "scroll",
   () => {
