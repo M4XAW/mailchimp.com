@@ -1,9 +1,3 @@
-// $('#icon-search').click(() => {
-//     console.log('Vous avez cliqué');
-//     $('#container-search').css('height', '300px')
-//     $('#container-search').css('transition', 'all 0.3s ease')
-// });
-
 $("#icon-search").click(function () {
   var newDiv = $("<div>").text("test");
   if ($("#container-search").height() !== 0) {
@@ -31,19 +25,6 @@ $("#close").click(function () {
     300
   );
 });
-
-// window.addEventListener('scroll', function() {
-//   var maDiv = document.querySelector('.description');
-//   var position = maDiv.getBoundingClientRect();
-
-//   if (position.top < window.innerHeight && position.bottom >= 0) {
-//     maDiv.style.opacity = 1;
-//     maDiv.style.transform = 'translateY(0px)';
-//   } else {
-//     maDiv.style.opacity = 0;
-//     maDiv.style.transform = 'translateY(-300px)';
-//   }
-// });
 
 const animatedElements = document.querySelectorAll(".animated");
 const animatedElementsRight = document.querySelectorAll(".animated-right");
