@@ -338,7 +338,6 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  
 }
 
 .box {
@@ -498,7 +497,7 @@ button:hover {
 
 .item-a {
   color: #202020;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 300;
   transition: all 0.3s ease;
 }
@@ -558,6 +557,7 @@ footer {
   .container {
     flex-direction: column;
     height: auto;
+    padding: 0;
   }
 }
 
@@ -566,7 +566,21 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  .horizontal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10vw 10vw;
+  }
 }
+
+@media (max-width: 375px) {
+  .horizontal-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 10vw 10vw;
+  }
+}
+
+
 
 /* ::-webkit-scrollbar {
   width: auto;
@@ -579,4 +593,4 @@ footer {
 ::-webkit-scrollbar-thumb {
   background-color: #202020;
   background-clip: content-box;
-} */
+} */ 
